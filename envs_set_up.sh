@@ -26,6 +26,7 @@ case ${Answer} in
   y|Y|yes)
     echo "rbenvをインストールします"
     anyenv install rbenv
+    echo 'eval "$(rbenv init -)"' >> ~/.zshrc
     echo "rbenvをインストール完了しました"
     ;;
 
@@ -40,6 +41,7 @@ case ${Answer} in
   y|Y|yes)
     echo "nodenvをインストールします"
     anyenv install nodenv
+    echo 'eval "$(nodenv init -)"' >> ~/.zshrc
     echo "nodenvをインストール完了しました"
     ;;
 
