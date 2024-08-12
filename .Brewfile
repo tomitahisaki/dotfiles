@@ -18,6 +18,7 @@ cask 'docker'
 cask 'postman'
 cask 'skitch'
 cask 'notion'
+cask 'warp'
 
 # keybords
 cask 'karabiner-elements'
