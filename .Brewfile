@@ -19,6 +19,7 @@ cask 'postman'
 cask 'skitch'
 cask 'notion'
 cask 'warp'
+cask 'arc'
 
 # keybords
 cask 'karabiner-elements'
