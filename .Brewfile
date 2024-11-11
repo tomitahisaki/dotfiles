@@ -6,6 +6,7 @@ brew 'anyenv'
 brew 'peco'
 brew 'neovim'
 brew 'openssl'
+brew 'starship'
 
 # https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 # dev
