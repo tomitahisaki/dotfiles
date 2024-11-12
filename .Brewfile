@@ -5,6 +5,7 @@ brew 'zsh'
 brew 'anyenv'
 brew 'peco'
 brew 'neovim'
+brew 'lazygit'
 brew 'openssl'
 brew 'starship'
 
