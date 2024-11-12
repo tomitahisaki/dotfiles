@@ -22,7 +22,6 @@ cask 'postman'
 cask 'skitch'
 cask 'notion'
 cask 'warp'
-cask 'arc'
 
 # keybords
 cask 'karabiner-elements'
@@ -30,6 +29,7 @@ cask 'karabiner-elements'
 # browser
 cask 'google-chrome'
 cask 'firefox'
+cask 'arc'
 
 # application
 cask '1password'
