@@ -8,6 +8,14 @@ brew 'neovim'
 brew 'lazygit'
 brew 'openssl'
 brew 'starship'
+brew 'fzf'
+brew 'zsh-completions'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
+
+# for telescope in lazyvim
+brew 'fd'
+breq 'ripgrep'
 
 # https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 # dev
@@ -21,6 +29,9 @@ cask 'docker'
 cask 'postman'
 cask 'notion'
 cask 'mattermost'
+
+# terminal
+cask 'font-fira-code-nerd-font'
 
 # keybords
 cask 'karabiner-elements'
