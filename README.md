@@ -41,3 +41,5 @@ sh ./setup_wezterm.sh
 ```shell
 chmod +x  <<ファイル名>>.sh
 ```
+
+※ lazyvimの環境でnodeが必要になる
