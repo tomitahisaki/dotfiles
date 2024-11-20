@@ -42,4 +42,5 @@ sh ./setup_wezterm.sh
 chmod +x  <<ファイル名>>.sh
 ```
 
-※ lazyvimの環境でnodeが必要になる
+※ lazyvimの環境でcopilotをつかうには、nodeが必要になる.
+
