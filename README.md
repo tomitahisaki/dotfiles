@@ -15,7 +15,7 @@ https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 
 ```shell
 ./install_brew_packages.sh
-
+```
 
 3. `peco_set_up.sh`：Pecoを設定します。Pecoは、コマンドラインでインタラクティブに検索を行うためのツールです。
 ```shell
