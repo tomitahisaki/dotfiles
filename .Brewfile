@@ -15,8 +15,10 @@ brew 'zsh-syntax-highlighting'
 
 # for telescope in lazyvim
 brew 'fd'
-breq 'ripgrep'
+brew 'ripgrep'
 
+# for expo
+brew 'watchman'
 # https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 # dev
 cask 'visual-studio-code'
