@@ -3,38 +3,40 @@
 set -e
 
 # settingのパスを指定
-WEZTERM_SETTING = "./setting/wezterm.lua"
-KEYBIND_SETTING = "./setting/keybinds.lua"
+WEZTERM_SETTING="./setting/wezterm.lua"
+KEYBIND_SETTING="./setting/keybinds.lua"
 
-echo "wezterm の設定をコピーしますか？ (yes/no)"
-read Answer </dev/tty
-case ${Answer} in
-y | Y | yes)
-  if [ -f "$WEZTERM_SETTING" ]; then
-    cp $WEZTERM_SETTING ~/.config/wezterm/wezterm.lua
-    cp
-  else
-    echo "${WEZTERM_SETTING} が存在しません"
-  fi
-  ;;
+# 設定ファイルをコピーする関数
+copy_setting() {
+  local source_file=$1
+  local target_file=$2
+  local description=$3
 
-n | N | no)
-  echo "設定の コピーをスキップしました"
-  ;;
-esac
+  # ホームディレクトリの(~)をフルパス($HOME)にしないと正しくパスが解決されないため
+  target_file=${target_file/#\~/$HOME}
 
-echo "キーバインドの設定をコピーしますか？ (yes/no)"
-read Answer </dev/tty
-case ${Answer} in
-y | Y | yes)
-  if [ -f "$KEYBIND_SETTING" ]; then
-    cp $KEYBIND_SETTING ~/.config/wezterm/keybinds.lua
-  else
-    echo "${KEYBIND_SETTING} が存在しません"
-  fi
-  ;;
+  echo "${description} をコピーしますか？ (yes/no)"
+  read Answer </dev/tty
+  case ${Answer} in
+  y | Y | yes)
+    if [ -f "$source_file" ]; then
+      cp "$source_file" "$target_file"
+      echo "${description} をコピーしました: $target_file"
+    else
+      echo "${source_file} が存在しません"
+    fi
+    ;;
+  n | N | no)
+    echo "${description} のコピーをスキップしました"
+    ;;
+  *)
+    echo "無効な入力です。スキップします。"
+    ;;
+  esac
+}
 
-n | N | no)
-  echo "設定の コピーをスキップしました"
-  ;;
-esac
+# wezterm の設定をコピー
+copy_setting "$WEZTERM_SETTING" "~/.config/wezterm/wezterm.lua" "wezterm の設定"
+
+# キーバインドの設定をコピー
+copy_setting "$KEYBIND_SETTING" "~/.config/wezterm/keybinds.lua" "キーバインドの設定"
