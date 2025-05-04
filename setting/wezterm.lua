@@ -12,18 +12,15 @@ config.use_ime = true
 
 config.initial_cols = 160
 config.initial_rows = 45
+config.scrollback_lines = 10000
 
 config.window_decorations = "RESIZE"
 config.show_new_tab_button_in_tab_bar = false
 config.show_close_tab_button_in_tabs = false
 config.tab_max_width = 100
 
--- タブの形をカスタマイズ
--- タブの左側の装飾
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
--- タブの右側の装飾
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
-
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
   local background = "#5c6d74"
   local foreground = "#FFFFFF"
@@ -53,6 +50,5 @@ end)
 config.disable_default_key_bindings = true
 config.keys = require("keybinds").keys
 config.key_tables = require("keybinds").key_tables
-config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config
