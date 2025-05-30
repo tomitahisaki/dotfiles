@@ -89,6 +89,24 @@ sh ./setup_wezterm.sh
 
 - デフォルトの設定からカスマイズしています。適宜、カスマイズしてください。
 
+### `autocmds.lua`
+
+インデントの設定がftplugin?によって上書きされてしまうので、暫定で設定を上書きする
+
+```
+-- ~/.config/nvim/lua/config/autocmds.lua
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*", -- すべての filetype に適用
+  callback = function()
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.expandtab = true
+  end,
+})
+```
+
 ---
 
 ### 実行権限がない場合
