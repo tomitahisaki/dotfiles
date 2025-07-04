@@ -1,129 +1,89 @@
-# wezterm, starship, asdf を使用した環境構築
+# dotfiles 環境構築
 
 ## Mac の環境構築
 
-このリポジトリは、Mac の初回環境構築を行うためのスクリプトと設定ファイルを提供します。以下の手順に従って環境を構築してください。
+このリポジトリは、Mac の初回環境構築を行うための Makefile を提供します。以下の手順に従って環境を構築してください。
 
 ---
 
-### 1. Homebrew のインストール
+### 1. dotfiles のセットアップ
 
-Homebrew は、Mac でソフトウェアをインストールするためのパッケージマネージャーです。
-
-```shell
-./homebrew_install.sh
-```
-
----
-
-### 2. 必要なパッケージのインストール
-
-Homebrew を使用して必要なパッケージをインストールします。インストールするパッケージは `.Brewfile` に記述されています。
-
-追加でパッケージが必要な場合は、以下のリンクから必要なパッケージを検索し、 `.Brewfile` に追加で記述してください
-
-- [Homebrew Formulae](https://formulae.brew.sh/formula/) でインストールしたいパッケージを検索
-- [Homebrew Cask](https://formulae.brew.sh/cask/) でインストールしたいアプリを検索
+以下のコマンドを実行して、dotfiles をセットアップします。
 
 ```shell
-./install_brew_packages.sh
+make setup-dotfiles
 ```
 
 ---
 
-### 3. Peco の設定
+### 2. VSCode の設定同期
 
-[Peco](https://github.com/peco/peco) は、コマンドラインでインタラクティブに検索を行うためのツールです。
-
-必要な方はインストールしてください
+VSCode の設定を同期するには、以下のコマンドを実行します。
 
 ```shell
-./peco_set_up.sh
+make setup-vscode
 ```
 
 ---
 
-### 4. asdf の実行
+### 3. VSCode の設定をダンプ
+
+現在の VSCode の設定をダンプするには、以下のコマンドを実行します。
 
 ```shell
-sh ./setup_asdf.sh
-```
-
-- 必要なライブラリを入力してください(例: Ruby)
-- バージョンを指定してください(3.3.6)
-
-asdf で管理されているライブラリは、インストールすることが可能です。
-
----
-
-### 5. 各種設定ファイルのコピー
-
-以下のスクリプトを実行して、設定ファイルを適切な場所にコピーします。
-
-#### Starship の設定
-
-[Starship](https://starship.rs/) は、カスタマイズ可能なシェルプロンプトです。
-
-```shell
-sh ./setup_starship.sh
-```
-
-#### WezTerm の設定
-
-[WezTerm](https://wezfurlong.org/wezterm/) は、高性能なターミナルエミュレータです。
-
-```shell
-sh ./setup_wezterm.sh
+make vscode-dump
 ```
 
 ---
 
-### 6. 設定ファイルの詳細
+### 4. Homebrew のバンドル
 
-#### `wezterm.lua`
+Homebrew を使用して必要なパッケージをインストールします。以下のコマンドを使用してください。
 
-- WezTerm のカスタム設定を記述しています。
-- カスタムキーバインドは `keybinds.lua` から読み込まれます。
+#### 通常のバンドル
 
-#### `keybinds.lua`
-
-- デフォルトの設定からカスマイズしています。適宜、カスマイズしてください。
-
-### `autocmds.lua`
-
-インデントの設定がftplugin?によって上書きされてしまうので、暫定で設定を上書きする
-
+```shell
+make brew-bundle
 ```
--- ~/.config/nvim/lua/config/autocmds.lua
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "*", -- すべての filetype に適用
-  callback = function()
-    vim.opt_local.tabstop = 2
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.softtabstop = 2
-    vim.opt_local.expandtab = true
-  end,
-})
+#### MAS アプリのバンドル
+
+```shell
+make brew-bundle-mas
+```
+
+#### Cask アプリのバンドル
+
+```shell
+make brew-bundle-cask
+```
+
+#### Taps のバンドル
+
+```shell
+make brew-bundle-taps
+```
+
+#### VSCode 用のバンドル
+
+```shell
+make brew-bundle-vscode
 ```
 
 ---
 
-### 実行権限がない場合
+### 5. Homebrew の設定をダンプ
 
-スクリプトに実行権限がない場合は、以下のコマンドで権限を追加してください。
+現在の Homebrew の設定をダンプするには、以下のコマンドを使用します。
+
+#### VSCode 用の設定をダンプ
 
 ```shell
-chmod +x <<ファイル名>>.sh
+make brew-bundle-vscode-dump
 ```
 
----
-
-### 注意事項
-
-- **LazyVim の環境で Copilot を使用する場合**:
-  - Node.js が必要です。`asdf` を使用して Node.js をインストールしてください。
+#### 全体の設定をダンプ
 
 ```shell
-asdf install nodejs latest
+make brew-bundle-dump
 ```
