@@ -87,3 +87,14 @@ make brew-bundle-vscode-dump
 ```shell
 make brew-bundle-dump
 ```
+
+#### 6
+
+mac の押しっぱなしを有効化
+
+```shell
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+defaults write com.googlecode.iterm2 ApplePressAndHoldEnabled -bool false
+defaults write org.vim.MacVim ApplePressAndHoldEnabled -bool false
+```
