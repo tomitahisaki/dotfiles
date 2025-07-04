@@ -1,0 +1,13 @@
+[user]
+	name = Hisakey
+	email = hogehoge@example.com
+[core]
+  editor = nvim
+  quotepath = false
+	excludesfile = ~/.gitignore
+
+[diff]
+  tool = nvimdiff
+[merge]
+  tool = nvimdiff
+  conflictstyle = diff3
