@@ -42,3 +42,7 @@ brew-bundle-dump:
 	brew bundle dump --force --taps --file=brewfiles/Brewfile.taps
 	brew bundle dump --force --mas --file=brewfiles/Brewfile.mas
 
+.PHONY: shell-dump
+shell-dump:
+	@./shell/dump.sh
+
