@@ -1,5 +1,7 @@
 cask "1password"
+# select arc or dia 
 cask "arc"
+cask "dia"
 cask "discord"
 cask "docker-desktop"
 cask "firefox"
