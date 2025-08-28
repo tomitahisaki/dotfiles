@@ -1,5 +1,6 @@
 [user]
-	name = Hisakey
+# Update the following user information to match your actual name and email address
+	name = hisakey
 	email = hogehoge@example.com
 [core]
   editor = nvim
