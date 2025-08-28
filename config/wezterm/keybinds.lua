@@ -8,7 +8,7 @@ return {
 			key = "w", mods = "CTRL|SHIFT|ALT",
 			action = wezterm.action.CloseCurrentPane { confirm = true },
 		},
-		-- Ctrl+Shift+W を無効化（上書き）
+		-- Disable Ctrl+Shift+W (override)
     {
       key = "w",
       mods = "CTRL|SHIFT",
