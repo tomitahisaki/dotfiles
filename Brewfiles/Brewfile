@@ -1,14 +1,13 @@
-brew "openssl@3"
-brew "asdf"
+# install depends on which needs
+# brew "asdf"
+# brew "anyenv"
+
+# brew "openssl@3"
 brew "zstd"
 brew "fd"
 brew "git"
-brew "golang-migrate"
 brew "lazygit"
-brew "mysql", restart_service: :changed
 brew "neovim"
-brew "peco"
-brew "postgresql@14"
 brew "ripgrep"
 brew "starship"
 brew "watchman"
@@ -16,4 +15,12 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
-brew "heroku/brew/heroku"
+
+# it maybe unnecessary
+# brew "peco"
+
+# private needs
+# brew "golang-migrate"
+# brew "heroku/brew/heroku"
+# brew "postgresql@14"
+# brew "mysql", restart_service: :changed

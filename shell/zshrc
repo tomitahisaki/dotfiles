@@ -5,6 +5,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 FPATH=/opt/homebrew/share/zsh-completions:$FPATH
 FPATH=/opt/homebrew/share/zsh/site-functions:$FPATH
 
+# is it necessary?
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+#  eval "$(anyenv init -)" # if you use anyenv
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh # if you use asdf
+

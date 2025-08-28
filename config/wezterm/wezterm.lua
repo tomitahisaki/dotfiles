@@ -8,13 +8,13 @@ config.automatically_reload_config = true
 config.color_scheme = "Gruvbox Dark"
 config.char_select_bg_color = "#282A36"
 config.char_select_fg_color = "#F8F8F2"
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 12.0
 config.use_ime = true
 
 config.initial_cols = 160
 config.initial_rows = 45
-config.scrollback_lines = 10000
+config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
 config.show_new_tab_button_in_tab_bar = false
@@ -49,8 +49,8 @@ end)
 ----------------------------------------------------
 -- keybinds
 ----------------------------------------------------
-config.disable_default_key_bindings = true
-config.keys = require("keybinds").keys
+config.disable_default_key_bindings = false
+config.keys = require("keybinds").keys  
 config.key_tables = require("keybinds").key_tables
 
 return config

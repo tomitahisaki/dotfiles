@@ -1,5 +1,6 @@
 [user]
-	name = Hisakey
+# 合わせて修正
+	name = hisakey
 	email = hogehoge@example.com
 [core]
   editor = nvim
