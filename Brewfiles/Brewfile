@@ -8,13 +8,16 @@ brew "fd"
 brew "git"
 brew "lazygit"
 brew "neovim"
-brew "ripgrep"
 brew "starship"
 brew "watchman"
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+
+# for lazyvim
+brew "luarocks"
+brew "ripgrep"
 
 # it maybe unnecessary
 # brew "peco"
