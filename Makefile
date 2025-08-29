@@ -4,7 +4,7 @@ homebrew-install:
 
 .PHONY: setup-dotfiles
 setup-dotfiles:
-	@./install.sh
+	@./setup_dotfiles.sh
 
 .PHONY: lazyvim-setup
 lazyvim-setup:

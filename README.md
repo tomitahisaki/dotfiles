@@ -9,7 +9,7 @@ dotfiles/
 ├── .Brewfile                # Homebrew パッケージ定義
 ├── .gitconfig              # Git 設定
 ├── Makefile                # タスク実行用
-├── install.sh              # dotfiles セットアップスクリプト
+├── setup_dotfiles.sh       # dotfiles セットアップスクリプト
 ├── homebrew_install.sh     # Homebrew インストールスクリプト
 ├── lazyvim_setup.sh        # LazyVim セットアップスクリプト
 ├── config/
