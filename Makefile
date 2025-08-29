@@ -1,6 +1,14 @@
+.PHONY: homebrew-install
+homebrew-install:
+	@./homebrew_install.sh
+
 .PHONY: setup-dotfiles
 setup-dotfiles:
 	@./install.sh
+
+.PHONY: lazyvim-setup
+lazyvim-setup:
+	@./lazyvim_setup.sh
 
 .PHONY: setup-vscode
 setup-vscode:
