@@ -12,7 +12,6 @@ ln -sf "$PWD/shell/zshrc" ~/.zshrc
 ln -sf "$PWD/config/starship.toml" ~/.config/starship.toml
 ln -sf "$PWD/config/wezterm/wezterm.lua" ~/.config/wezterm/wezterm.lua
 ln -sf "$PWD/config/wezterm/keybinds.lua" ~/.config/wezterm/keybinds.lua
-ln -sf "$PWD/config/nvim/lua/config/autocmds.lua" ~/.config/nvim/lua/config/autocmds.lua
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
 
 # install packages via Homebrew

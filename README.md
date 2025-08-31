@@ -1,98 +1,109 @@
 # dotfiles 環境構築
 
-## Mac の環境構築
+このリポジトリは、Mac の初回環境構築を行うための設定ファイルとスクリプトを提供します。
 
-このリポジトリは、Mac の初回環境構築を行うための Makefile を提供します。以下の手順に従って環境を構築してください。
+## 📁 リポジトリ構成
 
----
+```
+dotfiles/
+├── .Brewfile                # Homebrew パッケージ定義
+├── .gitconfig              # Git 設定
+├── Makefile                # タスク実行用
+├── setup_dotfiles.sh       # dotfiles セットアップスクリプト
+├── homebrew_install.sh     # Homebrew インストールスクリプト
+├── lazyvim_setup.sh        # LazyVim セットアップスクリプト
+├── config/
+│   ├── starship.toml       # Starship プロンプト設定
+│   ├── nvim/              # Neovim 設定（LazyVim）
+│   └── wezterm/           # WezTerm 設定
+├── shell/
+│   ├── zshrc              # Zsh 設定
+│   └── dump.sh            # Shell 設定ダンプ
+└── vscode/
+    ├── settings.json       # VS Code 設定
+    ├── keybindings.json   # VS Code キーバインド
+    ├── sync.sh            # VS Code 設定同期
+    └── dump.sh            # VS Code 設定ダンプ
+```
 
-### 1. dotfiles のセットアップ
+## 🚀 セットアップ手順
 
-以下のコマンドを実行して、dotfiles をセットアップします。
+### 1. リポジトリのクローン
 
-```shell
+```bash
+git clone https://github.com/tomitahisaki/dotfiles.git
+cd dotfiles
+```
+
+### 2. Homebrew のインストール（初回のみ）
+
+```bash
+make homebrew-install
+```
+
+### 3. dotfiles のセットアップ
+
+```bash
 make setup-dotfiles
 ```
 
----
+### 4. LazyVim のセットアップ
 
-### 2. VSCode の設定同期
-
-VSCode の設定を同期するには、以下のコマンドを実行します。
-
-```shell
-make setup-vscode
+```bash
+make lazyvim-setup
 ```
 
----
+### 5. Homebrew パッケージのインストール
 
-### 3. VSCode の設定をダンプ
-
-現在の VSCode の設定をダンプするには、以下のコマンドを実行します。
-
-```shell
-make vscode-dump
-```
-
----
-
-### 4. Homebrew のバンドル
-
-Homebrew を使用して必要なパッケージをインストールします。以下のコマンドを使用してください。
-
-#### 通常のバンドル
-
-```shell
+```bash
 make brew-bundle
 ```
 
-#### MAS アプリのバンドル
+### 6. VS Code 設定の同期
 
-```shell
-make brew-bundle-mas
+```bash
+make setup-vscode
 ```
 
-#### Cask アプリのバンドル
+## 📋 利用可能なコマンド
 
-```shell
-make brew-bundle-cask
-```
+### 初期セットアップ
+- `make homebrew-install` - Homebrew をインストール
+- `make setup-dotfiles` - dotfiles をセットアップ
+- `make lazyvim-setup` - LazyVim をセットアップ
 
-#### Taps のバンドル
+### 設定管理
+- `make shell-dump` - 現在のシェル設定をダンプ
 
-```shell
-make brew-bundle-taps
-```
+### VS Code 関連
+- `make setup-vscode` - VS Code 設定を同期
+- `make vscode-dump` - 現在の VS Code 設定をダンプ
 
-#### VSCode 用のバンドル
+### Homebrew 関連
+- `make brew-bundle` - .Brewfile からパッケージをインストール
+- `make brew-bundle-dump` - 現在の環境を .Brewfile にダンプ
 
-```shell
-make brew-bundle-vscode
-```
+## 🔧 主な設定内容
 
----
+### ターミナル・シェル
+- **Zsh** - シェル設定
+- **Starship** - クロスシェルプロンプト
+- **WezTerm** - ターミナルエミュレータ設定
 
-### 5. Homebrew の設定をダンプ
+### エディタ
+- **Neovim** - LazyVim 設定
+- **VS Code** - 設定とキーバインド
 
-現在の Homebrew の設定をダンプするには、以下のコマンドを使用します。
+### 開発ツール
+- **Git** - 基本設定
+- **各種開発ツール** - .Brewfile で管理
 
-#### VSCode 用の設定をダンプ
+## 🛠 個別セットアップ
 
-```shell
-make brew-bundle-vscode-dump
-```
+### macOS 設定の調整
 
-#### 全体の設定をダンプ
-
-```shell
-make brew-bundle-dump
-```
-
-#### 6
-
-mac の押しっぱなしを有効化
-
-```shell
+```bash
+# キーリピートを有効化
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 defaults write com.googlecode.iterm2 ApplePressAndHoldEnabled -bool false
