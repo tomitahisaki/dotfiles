@@ -7,8 +7,7 @@ echo "Setting up LazyVim with dotfiles management..."
 TARGET_DIR="$PWD/config/nvim"
 
 # clone lazyvim starter if directory does not exist
-if [ ! -d "$TARGET_DIR" ]; then
-  echo "Creating directory for Neovim config at $TARGET_DIR..."
+  echo "Cloning LazyVim starter to $TARGET_DIR..."
   git clone https://github.com/LazyVim/starter "$PWD/config/nvim"
   rm -rf "$PWD/config/nvim/.git"
 else
