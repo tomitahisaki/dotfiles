@@ -6,8 +6,8 @@ homebrew-install:
 setup-dotfiles:
 	@./setup_dotfiles.sh
 
-.PHONY: lazyvim-setup
-lazyvim-setup:
+.PHONY: setup-lazyvim
+setup-lazyvim:
 	@./lazyvim_setup.sh
 
 .PHONY: setup-vscode

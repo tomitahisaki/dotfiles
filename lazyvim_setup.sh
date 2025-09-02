@@ -4,13 +4,15 @@ set -e
 
 echo "Setting up LazyVim with dotfiles management..."
 
-# Clone LazyVim starter into dotfiles
-echo "Cloning LazyVim starter to dotfiles..."
-git clone https://github.com/LazyVim/starter "$PWD/config/nvim"
+TARGET_DIR="$PWD/config/nvim"
 
-# Remove .git folder so you can add it to your own repo later
-echo "Removing .git folder..."
-rm -rf "$PWD/config/nvim/.git"
+# clone lazyvim starter if directory does not exist
+  echo "Cloning LazyVim starter to $TARGET_DIR..."
+  git clone https://github.com/LazyVim/starter "$PWD/config/nvim"
+  rm -rf "$PWD/config/nvim/.git"
+else
+  echo "Directory $TARGET_DIR already exists. Skipping clone."
+fi
 
 # Create symbolic link from ~/.config/nvim to dotfiles
 echo "Creating symbolic link..."
