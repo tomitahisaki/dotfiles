@@ -3,12 +3,12 @@
 	name = hisakey
 	email = hogehoge@example.com
 [core]
-  editor = nvim
+  editor = vim
   quotepath = false
 	excludesfile = ~/.gitignore
 
 [diff]
-  tool = nvimdiff
+  tool = vimdiff
 [merge]
-  tool = nvimdiff
+  tool = vimdiff
   conflictstyle = diff3
