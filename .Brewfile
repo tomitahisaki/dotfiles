@@ -14,7 +14,6 @@ tap "homebrew/services" # brew services
 # brew 'peco'
 
 brew 'git'
-brew 'zsh'
 brew 'zstd'
 brew 'lazygit'
 brew 'openssl'
@@ -25,16 +24,21 @@ brew 'zsh-completions'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
+# to use psych for rbenv
+brew 'libyaml'
+
 # for telescope/lazyvim
 brew 'fd'
 brew 'luarocks'
 brew 'ripgrep'
 
+# for ruby-lsp in LazyVim
+brew "mysql"
+
 # private needs
 # brew "golang-migrate"
 # brew "heroku/brew/heroku"
 # brew "postgresql@14"
-# brew "mysql", restart_service: :changed
 
 # https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 # dev
