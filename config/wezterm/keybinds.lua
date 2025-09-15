@@ -16,8 +16,8 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action.DisableDefaultAssignment,
 		},
-		{ key = "n", mods = "CTRL", action = act.SwitchWorkspaceRelative(1) },
-		{ key = "p", mods = "CTRL", action = act.SwitchWorkspaceRelative(-1) },
+		-- { key = "n", mods = "CTRL", action = act.SwitchWorkspaceRelative(1) },
+		-- { key = "p", mods = "CTRL", action = act.SwitchWorkspaceRelative(-1) },
 		{
 			mods = "LEADER",
 			key = "s",
