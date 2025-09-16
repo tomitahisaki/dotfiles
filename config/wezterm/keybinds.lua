@@ -3,7 +3,7 @@ local act = wezterm.action
 
 -- override any keybinds you want
 return {
-	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
+	leader = { key = ";", mods = "CTRL", timeout_milliseconds = 1000 },
 	keys = {
 		{
 			key = "w",
