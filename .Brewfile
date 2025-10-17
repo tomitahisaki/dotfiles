@@ -57,6 +57,7 @@ cask "sequel-ace"
 cask "postman"
 cask "slack"
 cask "zoom"
+cask "meetingbar"
 
 # private needs
 # cask "notion"
