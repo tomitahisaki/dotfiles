@@ -4,7 +4,7 @@
 
 ## 📁 リポジトリ構成
 
-```
+```text
 dotfiles/
 ├── .Brewfile                # Homebrew パッケージ定義
 ├── .gitconfig              # Git 設定
