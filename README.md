@@ -4,7 +4,7 @@
 
 ## 📁 リポジトリ構成
 
-```
+```text
 dotfiles/
 ├── .Brewfile                # Homebrew パッケージ定義
 ├── .gitconfig              # Git 設定
@@ -68,33 +68,40 @@ make setup-vscode
 ## 📋 利用可能なコマンド
 
 ### 初期セットアップ
+
 - `make homebrew-install` - Homebrew をインストール
 - `make setup-dotfiles` - dotfiles をセットアップ
 - `make lazyvim-setup` - LazyVim をセットアップ
 
 ### 設定管理
+
 - `make shell-dump` - 現在のシェル設定をダンプ
 
 ### VS Code 関連
+
 - `make setup-vscode` - VS Code 設定を同期
 - `make vscode-dump` - 現在の VS Code 設定をダンプ
 
 ### Homebrew 関連
+
 - `make brew-bundle` - .Brewfile からパッケージをインストール
 - `make brew-bundle-dump` - 現在の環境を .Brewfile にダンプ
 
 ## 🔧 主な設定内容
 
 ### ターミナル・シェル
+
 - **Zsh** - シェル設定
 - **Starship** - クロスシェルプロンプト
 - **WezTerm** - ターミナルエミュレータ設定
 
 ### エディタ
+
 - **Neovim** - LazyVim 設定
 - **VS Code** - 設定とキーバインド
 
 ### 開発ツール
+
 - **Git** - 基本設定
 - **各種開発ツール** - .Brewfile で管理
 

@@ -49,18 +49,24 @@ style = 'fg:#7aa2f7 bg:#1a1b26'
 format = '[  $symbol$branch(:$remote_branch)]($style)' # nf-pl-left_soft_divider
 
 [git_status]
-style = 'fg:#e0af68 bg:#1a1b26'
-conflicted = '='
-ahead = '⇡${count}'
-behind = '⇣${count}'
-diverged = '⇕'
-up_to_date = '✓'
-untracked = '?'
-stashed = '$'
-modified = '!${count}'
-renamed = '»'
-deleted = '✘'
-format = '([\[$all_status$ahead_behind\]]($style))'
+
+[git_status]
+style = "fg:#e0af68 bg:#1a1b26"
+
+conflicted = "⚠"   # 衝突は警告系
+stashed    = "≡"   # stash は積み重なり系
+modified   = "~"   # 変更は波線
+staged     = "+"   # ステージはプラス
+untracked  = "?"   # 未追跡は疑問符（定番）
+renamed    = "»"   # リネームは矢印/送り
+deleted    = "−"   # 削除はマイナス（+と対にすると直感的）
+
+ahead      = "⇡"
+behind     = "⇣"
+diverged   = "⇕"
+up_to_date = "✓"
+
+format = "([$stashed$all_status$ahead_behind]($style) )"
 
 [git_metrics]
 added_style = 'fg:#9ece6a bg:#1a1b26'
