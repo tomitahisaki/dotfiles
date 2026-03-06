@@ -14,6 +14,7 @@ tap "homebrew/services" # brew services
 # brew 'peco'
 
 brew 'git'
+brew 'gh'
 brew 'zstd'
 brew 'lazygit'
 brew 'openssl'
