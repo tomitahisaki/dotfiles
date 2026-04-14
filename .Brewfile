@@ -43,7 +43,6 @@ brew "mysql"
 
 # https://formulae.brew.sh/cask/ でインストールしたいアプリを検索
 # dev
-# cask "dia" # commented out until brew can install dia
 cask 'firefox'
 cask "google-chrome"
 cask "docker-desktop"
