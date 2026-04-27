@@ -10,9 +10,6 @@ tap "homebrew/services" # brew services
 # brew "asdf"
 # brew "anyenv"
 
-# it maybe unnecessary
-# brew 'peco'
-
 brew 'git'
 brew 'gh'
 brew 'zstd'
@@ -57,7 +54,6 @@ cask "sequel-ace"
 cask "postman"
 cask "slack"
 cask "zoom"
-cask "meetingbar"
 
 # private needs
 # cask "notion"
