@@ -49,8 +49,6 @@ style = 'fg:#7aa2f7 bg:#1a1b26'
 format = '[  $symbol$branch(:$remote_branch)]($style)' # nf-pl-left_soft_divider
 
 [git_status]
-
-[git_status]
 style = "fg:#e0af68 bg:#1a1b26"
 
 conflicted = "⚠"   # 衝突は警告系
